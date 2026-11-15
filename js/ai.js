@@ -260,7 +260,7 @@ ${SCHEMA_TEXT}
       body: JSON.stringify(body),
     });
   } catch (e) {
-    throw new AiError(`Could not reach the Claude service (${e.message}). Auto-fill only works from the live site, jakalnz.github.io.`);
+    throw new AiError(`Could not reach the Claude service (${e.message}). Auto-fill only works from the live site, uoa-maud.github.io.`);
   }
   const text = await res.text();
   // The worker answers a wrong code with plain "Unauthorised"; a JSON 401 is

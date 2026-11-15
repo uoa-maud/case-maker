@@ -135,7 +135,7 @@ export function buildPrintSheet(c, built) {
       h('h2', 'Work through the case in this order'),
       h('ol.ps-steps', included.map((s, i) => stepItem(i + 1, s, built[s.key], c)))),
     h('section.ps-instructor-only.ps-key', h('h2', 'Answer key'), key),
-    h('footer.ps-foot', 'Made with Case-maker · jakalnz.github.io/case-maker'));
+    h('footer.ps-foot', 'Made with Case-maker · uoa-maud.github.io/case-maker'));
 }
 
 // Put a fresh sheet on <body>, print it as the student or instructor copy, then tidy up.

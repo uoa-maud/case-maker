@@ -1,10 +1,10 @@
 // Otoscopy simulator data: the image library is read from the live site
 // (GitHub Pages); cases and images are written through the otoscopy-admin
-// worker, which commits them to the jakalnz/otoscopy repo.
+// worker, which commits them to the uoa-maud/otoscopy repo.
 
 import { OTOSCOPY_WORKER_URL } from './config.js';
 
-export const OTOSCOPY_SITE = 'https://jakalnz.github.io/otoscopy/';
+export const OTOSCOPY_SITE = 'https://uoa-maud.github.io/otoscopy/';
 const PW_KEY = 'casemaker-otoscopy-password';
 const MAX_EDGE = 1600;          // px; otoscope photos don't need more
 const TARGET_BYTES = 900 * 1024; // the worker/GitHub path fails at about 1 MB

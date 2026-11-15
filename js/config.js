@@ -3,14 +3,14 @@
 // Coding folder), used to test links against unpushed simulator changes.
 
 export const SIMS = [
-  { key: 'history',    label: 'History taking',  deployed: 'https://jakalnz.github.io/history-taking-simulator/', local: '/history-taking-simulator/' },
-  { key: 'otoscopy',   label: 'Otoscopy',        deployed: 'https://jakalnz.github.io/otoscopy/',                local: '/otoscopy/' },
-  { key: 'pta',        label: 'Pure-tone audiometry', deployed: 'https://jakalnz.github.io/pta-simulator/',     local: '/pta-simulator/' },
-  { key: 'play',       label: 'Play audiometry', deployed: 'https://jakalnz.github.io/play-simulator/',          local: '/play-simulator/' },
-  { key: 'speech',     label: 'Speech testing',  deployed: 'https://jakalnz.github.io/speech-testing-simulator/', local: '/speech-testing-simulator/' },
-  { key: 'immittance', label: 'Immittance',      deployed: 'https://jakalnz.github.io/immittance-simulator/',    local: '/immittance%20simulator/' },
-  { key: 'dpoae',      label: 'DPOAEs',          deployed: 'https://jakalnz.github.io/dpoae-simulator/',         local: '/dpoae-simulator/' },
-  { key: 'abr',        label: 'ABR',             deployed: 'https://jakalnz.github.io/abr-simulator/',           local: '/ABR/' },
+  { key: 'history',    label: 'History taking',  deployed: 'https://uoa-maud.github.io/history-taking-simulator/', local: '/history-taking-simulator/' },
+  { key: 'otoscopy',   label: 'Otoscopy',        deployed: 'https://uoa-maud.github.io/otoscopy/',                local: '/otoscopy/' },
+  { key: 'pta',        label: 'Pure-tone audiometry', deployed: 'https://uoa-maud.github.io/pta-simulator/',     local: '/pta-simulator/' },
+  { key: 'play',       label: 'Play audiometry', deployed: 'https://uoa-maud.github.io/play-simulator/',          local: '/play-simulator/' },
+  { key: 'speech',     label: 'Speech testing',  deployed: 'https://uoa-maud.github.io/speech-testing-simulator/', local: '/speech-testing-simulator/' },
+  { key: 'immittance', label: 'Immittance',      deployed: 'https://uoa-maud.github.io/immittance-simulator/',    local: '/immittance%20simulator/' },
+  { key: 'dpoae',      label: 'DPOAEs',          deployed: 'https://uoa-maud.github.io/dpoae-simulator/',         local: '/dpoae-simulator/' },
+  { key: 'abr',        label: 'ABR',             deployed: 'https://uoa-maud.github.io/abr-simulator/',           local: '/ABR/' },
 ];
 
 export const SIM_BY_KEY = Object.fromEntries(SIMS.map((s) => [s.key, s]));

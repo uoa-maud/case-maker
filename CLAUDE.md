@@ -2,7 +2,7 @@
 
 Instructor tool that builds one audiology teaching case and publishes it to every `jakalnz` simulator, in clinical
 order: history → otoscopy → PTA/play → speech → immittance → DPOAE → ABR. Static vanilla HTML/CSS/ES modules, no
-build step, no dependencies. Live at https://jakalnz.github.io/case-maker/ (repo `jakalnz/case-maker`, Pages from
+build step, no dependencies. Live at https://uoa-maud.github.io/case-maker/ (repo `uoa-maud/case-maker`, Pages from
 `main` / root). Admin PIN `1234` (same convention as the other simulators' admin pages).
 
 ## Run / test
@@ -116,10 +116,10 @@ encoder — and push the simulator **before** case-maker, or live links break.
 - 401 handling: plain `Unauthorised` = wrong access code; JSON 401 = the worker's Anthropic key was rejected.
 
 ## Otoscopy (js/otoscopy-api.js, Otoscopy step)
-- Library read from `https://jakalnz.github.io/otoscopy/data/library/index.json` (per-ear thumbnails, tag search).
+- Library read from `https://uoa-maud.github.io/otoscopy/data/library/index.json` (per-ear thumbnails, tag search).
 - Writes go through `https://otoscopy-admin.mpsanders.workers.dev` (`X-Admin-Password`, stored in `sessionStorage`
   key `casemaker-otoscopy-password`): `POST /api/image`, `POST /api/case`, `PUT /api/case/:id`, `DELETE` for both.
-  Every write is a **real commit to `jakalnz/otoscopy` main**; new files go live on Pages after ~40–60 s.
+  Every write is a **real commit to `uoa-maud/otoscopy` main**; new files go live on Pages after ~40–60 s.
 - Uploads are re-encoded to JPEG ≤ ~900 KB, ≤ 1600 px (the worker/GitHub path fails around 1 MB).
 
 ## Rules when working on this project
@@ -128,7 +128,7 @@ encoder — and push the simulator **before** case-maker, or live links break.
 - Test documents must be fictional (e.g. print an HTML report to PDF in the scratchpad). Never use files found in
   `Coding/` — `ABR/ABR Images/` holds real patient names and `ABR/Protocols and Norms/` is copyrighted.
 - Live otoscopy tests: confirm with the user first, name test items clearly, delete them via the worker afterwards,
-  and verify with the GitHub API (`api.github.com/repos/jakalnz/otoscopy/contents/...`) — `raw.githubusercontent.com`
+  and verify with the GitHub API (`api.github.com/repos/uoa-maud/otoscopy/contents/...`) — `raw.githubusercontent.com`
   is CDN-cached for minutes.
 - The browser tool times out at ~45 s: start long calls un-awaited, store the result on `window`, and poll.
 - The speech simulator asks a `confirm()` before showing graphs — don't click Show Graphs in automation.
